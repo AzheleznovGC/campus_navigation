@@ -1,0 +1,22 @@
+topic: ~whereToGo()
+language: enu
+
+
+# Defining extra concepts out of words or group of words
+concept:(hello) [hello hi hey "good morning" greetings] 
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+u:(~hello) ~hello ^nextProposal
+
+concept: (places) [ "Room _*" "Building _*" "the cafe" "the bar" "the gym" "* Residence _*" "* Feild"] 
+
+
+
+proposal: [ "Where would you like to go?" "where can I hel you get to?" "where do you want to go?" ]
+    u1:(_place) you want to go to $1 
+    u1:(_!~places) sorry i dont know where $1 is
+    u1:(show map) $map=1
+    
