@@ -16,7 +16,20 @@ concept: (places) [ "Room _*" "Building _*" "the cafe" "the bar" "the gym" "* Re
 
 
 proposal: [ "Where would you like to go?" "where can I hel you get to?" "where do you want to go?" ]
-    u1:(_place) you want to go to $1 
+    u1:(Room _number) you want to go to $1 
+    
+    u1:([A "Building A" "engineering building" "Center for engineering technologies"]) you want to go to building A
+    u1:([B "Building B" "Founders building"]) you want to go to building B
+    u1:([C "Building C" "Student Services" "Student Services Center" "Student services building"]) you want to go to building C
+    u1:([D "Building D" "Art Building" "Arts building" "Helen and Arch brown center for design and visual arts"]) you want to go to building D
+    u1:([E "Building E" "Hospitality Building" "Tourism building" "Recreation building" "center for hospitality tourism and recreation"]) you want to go to building E
+    u1:([F "Building F" "Trades Building" "Center for skilled trades"]) you want to fo to building F
+    u1:([H "Building H" "Automotive buisness" "Automotive business building" "Automotive business school of canada"]) You want to go to building H
+    u1:([J "building J" "Student building" "Student life building" "student life center"]) you want to go to building J
+    u1:([K "building K" "University partnership building" "University partnership center"]) you want to go to building K
+    u1:([M "building M" "sadlon center" "health building" "Sadlon center for health wellness and sciences" "sience building"]) you want to go to building M
+    u1:([N "building N" "tech building" "peter b moore building" "peter b moore advaced technology center"]) you want to go to building N
+    
     u1:(_!~places) sorry i dont know where $1 is
     u1:(show map) $map=1
     
